@@ -246,7 +246,8 @@
     });
     function formatDateTime(dateTime) {
       const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', timeZoneName: 'short' };
-      const dataFormatada = new Date(dateTime).toLocaleDateString('pt-BR', options);
+      // locale is selected here
+      const dataFormatada = new Date(dateTime).toLocaleDateString('en-gb', options);
       return dataFormatada;
     };
     document.getElementById('delete-event-button').addEventListener('click', function() {
